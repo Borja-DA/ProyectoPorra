@@ -25,6 +25,7 @@
     <!-- TÍTULO PRINCIPAL -->
     <h1>Porra Doppler</h1>
 
+
     <!-- BOTONES DE NAVEGACIÓN -->
     <div class="botones">
       <a href="workInProgress.html">Buscador de canciones</a>
@@ -33,4 +34,21 @@
       <a href="workInProgress.html">Apóyanos</a>
     </div>
   </body>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script>
+  const supabase = window.supabase.createClient(
+    "https://mabvzlabnueoswqlmlqb.supabase.co",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1hYnZ6bGFibnVlb3N3cWxtbHFiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwMjgzMDYsImV4cCI6MjA3MzYwNDMwNn0.Nof1vmo0NlFB0vyV1v-L9O-dogCueV9ao8YYrIKCpkI"
+  );
+
+  // Probar conexión
+  async function test() {
+    const { data, error } = await supabase.from("porra_canciones").select("*");
+    console.log(data, error);
+  }
+
+  test();
+</script>
+
 </html>
