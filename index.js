@@ -13,23 +13,31 @@ const imagenesFondo = [
   "imagenes/portadasAlbumes/bonCalso_outtaMyHead.jpg",
   "imagenes/portadasAlbumes/mvrk_laFeQueMeTengas.jpg",
   "imagenes/portadasAlbumes/rusowsky_Daisy.jpg",
-  "imagenes/portadasAlbumes/stickyMA_5Dimension.jpg"
+  "imagenes/portadasAlbumes/stickyMA_5Dimension.jpg",
 ];
 
-// Cambiar el fondo aleatoriamente cada 4 segundos
-function cambiarFondo() {
-  const indiceAleatorio = Math.floor(Math.random() * imagenesFondo.length);
-  fondo.style.backgroundImage = `url('${imagenesFondo[indiceAleatorio]}')`;
-}
-cambiarFondo(); // inicial
+// Cambiar fondo aleatoriamente cada 4 segundos
+const cambiarFondo = () => {
+  const index = Math.floor(Math.random() * imagenesFondo.length);
+  fondo.style.backgroundImage = `url('${imagenesFondo[index]}')`;
+};
+
+cambiarFondo();
 setInterval(cambiarFondo, 4000);
 
 // POPUP
-function cerrarPopup() {
-  document.getElementById("popupBienvenida").style.display = "none";
-}
 
-// Mostrar popup al cargar la página
-window.onload = function() {
-  document.getElementById("popupBienvenida").style.display = "flex";
+const cerrarPopup = () => {
+  const popup = document.getElementById("popupBienvenida");
+  if (popup) popup.style.display = "none";
 };
+
+window.addEventListener("load", () => {
+  const popup = document.getElementById("popupBienvenida");
+  const popupMostrado = sessionStorage.getItem("popupBienvenidaMostrado");
+
+  if (popup && !popupMostrado) {
+    popup.style.display = "flex";
+    sessionStorage.setItem("popupBienvenidaMostrado", "true");
+  }
+});

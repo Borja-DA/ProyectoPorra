@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Porra Doppler 🎶</title>
-<link rel="stylesheet" href="index.css">
-<script src="index.js" defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Porra Doppler 🎶</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <!-- POPUP DE BIENVENIDA -->
+    <div id="popupBienvenida" class="popup">
+      <div class="popup-content">
+        <span class="cerrar" onclick="cerrarPopup()">×</span>
+        <h2>¡Bienvenido a la Porra de Doppler! 🎶</h2>
+        <p>
+          ¡Disfruta de la noche y si no sabes cómo funciona revisa las reglas!
+        </p>
+      </div>
+    </div>
 
-<!-- POPUP DE BIENVENIDA -->
-<div id="popupBienvenida" class="popup">
-  <div class="popup-content">
-    <span class="cerrar" onclick="cerrarPopup()">×</span>
-    <h2>¡Bienvenido a la Porra de Doppler! 🎶</h2>
-    <p>¡Disfruta de la noche y si no sabes cómo funciona revisa las reglas!</p>
-  </div>
-</div>
+    <!-- FONDO ANIMADO -->
+    <div class="fondo" id="fondo"></div>
 
-<!-- FONDO ANIMADO -->
-<div class="fondo" id="fondo"></div>
+    <!-- TÍTULO PRINCIPAL -->
+    <h1>Porra Doppler</h1>
 
-<!-- TÍTULO PRINCIPAL -->
-<h1>Porra Doppler</h1>
 
-<!-- BOTONES DE NAVEGACIÓN -->
-<div class="botones">
-  <a href="workInProgress.html">Buscador de canciones</a>
-  <a href="workInProgress.html">Ganadores anteriores</a>
-  <a href="ficheros\paginaReglas\paginaReglas.html">Reglas de la porra</a>
-  <a href="workInProgress.html">Apóyanos</a>
-</div>
-
-</body>
+    <!-- BOTONES DE NAVEGACIÓN -->
+    <div class="botones">
+      <a href="workInProgress.html">Buscador de canciones</a>
+      <a href="workInProgress.html">Ganadores anteriores</a>
+      <a href="ficheros/paginaReglas/paginaReglas.html">Reglas de la porra</a>
+      <a href="workInProgress.html">Apóyanos</a>
+    </div>
+  </body>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 <script>

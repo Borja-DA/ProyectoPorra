@@ -1,103 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>En Construcción 🔧</title>
-<style>
-  body {
-    background-color: #000;
-    color: #fff;
-    min-height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>En Construcción 🔧</title>
+    <style>
+      /* Paleta de colores y variables reutilizables */
+      :root {
+        --rojo: #ff2e2e;
+        --rojo-hover: #e01e1e;
+        --fondo: #000;
+        --texto: #fff;
+        --sombra: #000;
+      }
 
-  /* Contenedor principal */
-  .contenido {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* separa la parte superior y el botón */
-    align-items: center;
-    height: 70vh;
-    max-width: 400px;
-    width: 100%;
-  }
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  /* Parte superior: icono + título + texto */
-  .texto {
-    text-align: center;
-  }
+      body {
+        background-color: var(--fondo);
+        color: var(--texto);
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Arial", sans-serif;
+        padding: 20px;
+        text-align: center;
+      }
 
-  .icono {
-    font-size: 5rem;
-    color: #ff2e2e;
-    margin-bottom: 20px;
-    animation: bounce 1.5s infinite;
-  }
+      /* Contenedor principal */
+      .contenido {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* separa la parte superior y el botón */
+        align-items: center;
+        height: 70vh;
+        max-width: 400px;
+        width: 100%;
+      }
 
-  h1 {
-    font-size: 2.8rem;
-    color: #ff2e2e;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px #000;
-  }
+      /* Parte superior: icono + título + texto */
+      .icono {
+        font-size: 5rem;
+        color: var(--rojo);
+        margin-bottom: 20px;
+        animation: bounce 1.5s infinite;
+      }
 
-  p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
+      h1 {
+        font-size: 2.8rem;
+        color: var(--rojo);
+        margin-bottom: 20px;
+        text-shadow: 2px 2px var(--sombra);
+      }
 
-  /* Animación del icono */
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-  }
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
 
-  /* Botón */
-  .volver {
-    text-decoration: none;
-    background-color: #ff2e2e;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
+      /* Animación del icono */
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
 
-  .volver:hover {
-    background-color: #e01e1e;
-    transform: scale(1.05);
-  }
+      /* Botón */
+      .volver {
+        text-decoration: none;
+        background-color: var(--rojo);
+        color: var(--texto);
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
 
-  /* Responsive: ajusta icono y texto en móviles */
-  @media (max-width: 500px) {
-    .icono { font-size: 4rem; }
-    h1 { font-size: 2.2rem; }
-    p { font-size: 1rem; }
-    .contenido { height: 80vh; } /* un poco más de espacio para móviles */
-    .volver { font-size: 0.95rem; padding: 10px 20px; }
-  }
+      .volver:hover {
+        background-color: var(--rojo-hover);
+        transform: scale(1.05);
+      }
 
-</style>
-</head>
-<body>
+      /* Responsive: ajusta icono y texto en móviles */
+      @media (max-width: 500px) {
+        .icono {
+          font-size: 4rem;
+        }
+        h1 {
+          font-size: 2.2rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+        .contenido {
+          height: 80vh;
+        } /* un poco más de espacio para móviles */
+        .volver {
+          font-size: 0.95rem;
+          padding: 10px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="contenido">
+      <!-- Parte superior -->
+      <div>
+        <div class="icono">🚧</div>
+        <h1>¡En construcción!</h1>
+        <p>
+          Estamos trabajando duro para traerte algo increíble. Mientras tanto,
+          puedes volver a la página principal y seguir disfrutando de la porra.
+        </p>
+      </div>
 
-<div class="contenido">
-  <!-- Parte superior -->
-  <div class="texto">
-    <div class="icono">🚧</div>
-    <h1>¡En construcción!</h1>
-    <p>Estamos trabajando duro para traerte algo increíble. Mientras tanto, puedes volver a la página principal y seguir disfrutando de la porra.</p>
-  </div>
-
-  <!-- Botón abajo -->
-  <a class="volver" href="../index.html">Volver al inicio</a>
-</div>
-
-</body>
+      <!-- Botón abajo -->
+      <a class="volver" href="../index.html">Volver al inicio</a>
+    </main>
+  </body>
 </html>
